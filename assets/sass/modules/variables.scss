@@ -12,23 +12,36 @@ $color-primary: DarkSlateBlue;
 //Black
 $black: #000;
 $medium-black: #1d1d1d;
+$soft-black: #555;
+$softest-black: #444;
+
+//gray
 $darker-gray: #272727;
-$dark-gray:#101010;
-$medium-gray: #888;
-$light-gray: #d1d1d1;
+$medium-gray: #333;
+$harder-gray: #777;
+$hard-gray: #888;
+$dark-grayish: #4c5051;
+$very-dark-gray: #383c3d;
+$gray-two: #999;
+$soft-gray: #bbb;
+$med-gray: #e5e5e5;
+$mid-gray: #666;
+$lighest-gray: #f1f1f1;
+$light-gray: #f4f4f4;
+$very-light-gray: #eee;
+$light-gray: #ddd;
+$lighty-gray: #ccc;
+$normgray: #777;
+$gray: #aaa;
 
 //White
 $white: #fff;
 
-//Red
-$soft-red: #dc535b;
-$medium-red: #c9373f;
+//Yellow
+$soft-yellow: #fff486;
 
-//Blue
-$aqua: #00add0;
-//Purple
-$magenta: #930f5b;
-
+//Pink
+$pink: #e93ead;
 // Base
 
 $base-line-height: 1.7;
@@ -39,6 +52,8 @@ $base-line-height: 1.7;
 
 //Fonts
 $fonts: 'Titillium Web', sans-serif;
+$fa-brands: "Font Awesome 5 Brands";
+$fa-free: "Font Awesome 5 Free";
 
 // Weights
 $hairline-weight: 100;
