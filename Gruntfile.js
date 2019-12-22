@@ -2,16 +2,16 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-  concat: {
-        js: {
-          src: ['assets/js/scripts.js'],
-          dest: 'build/js/scripts.js',  
-        },
-        csssass: {
-          src: ['assets/sass/**/*.scss'],
-          dest: 'build/css/styles.min.css',  
-        },
-    },  
+    // jshint: {
+    //   options: {
+    //     jshintrc: '.jshintrc'
+    //   },
+    //   all: [
+    //     'Gruntfile.js',
+    //     'assets/js/**/*.js',
+    //     '!assets/build/app.min.js'
+    //   ]
+    // },
     sass: {
       dist: {
         options: {
@@ -20,21 +20,26 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'build/css/styles.min.css': [
-              'assets/sass/styles.scss'
+          'assets/build/app.min.css': [
+              'assets/sass/app.scss'
           ]
         }
       }
     },
+    uglify: {
+      dist: {
+        files: {
+          'assets/build/app.min.js': [
+            'assets/js/app.js'
+          ]
+        },
+        options: {
+          sourceMap: 'assets/build/app.min.js.map',
+          sourceMappingURL: '/assets/build/app.min.js.map'
+        }
+      }
+    },
     watch: {
-      js: {
-        files: ['assets/js/*.js'],
-        tasks: ['concat'],
-      },
-      csssass: {
-        files: ['assets/sass/**/*.scss'],
-        tasks: ['concat'],
-      },
       options: {
         livereload: true
       },
@@ -46,7 +51,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: [
-          'assets/js/*.js'
+          'assets/js/**/*.js'
         ],
         tasks: ['uglify']
       },
@@ -56,36 +61,29 @@ module.exports = function(grunt) {
         ]
       }
     },
-    uglify: {
-      dist: {
-        files: {
-          'build/js/scripts.min.js': [
-            'assets/js/scripts.js'
-          ]
-        },
-        options: {
-          sourceMap: 'build/scripts.min.js.map',
-          sourceMappingURL: 'build/scripts.min.js.map'
-        }
-      }
-    },
     clean: {
       dist: [
-        'build/css/styles.min.css',
-        'build/js/scripts.min.js'
+        'assets/build/app.min.css',
+        'assets/build/app.min.js'
       ]
     }
   });
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
+  //grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Register tasks
-  grunt.registerTask('default', ['concat','uglify','clean','sass']);
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('default', [
+    'clean',
+    'sass',
+    'uglify'
+  ]);
+  grunt.registerTask('dev', [
+    'watch'
+  ]);
 
 };
