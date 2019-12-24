@@ -2,7 +2,7 @@
 
 <div class="content">
     
-    <?php get_template_part('inc/page-title'); ?>
+    <?php get_template_part('includes/page-title'); ?>
 
     <div class="pad group">
         
