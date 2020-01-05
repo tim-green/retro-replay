@@ -72,8 +72,8 @@ if ( ! function_exists( 'retro_setup' ) ) {
         add_image_size( 'retro-large', 720, 404, true );
         
         // Thumbnail sizes custom widgets
-        add_image_size( 'alx-small', 200, 200, true );
-        add_image_size( 'alx-medium', 520, 292, true );
+        add_image_size( 'retro-small', 200, 200, true );
+        add_image_size( 'retro-medium', 520, 292, true );
 
         // Custom menu areas
         register_nav_menus( array(
@@ -180,13 +180,14 @@ add_action( 'widgets_init', 'retro_sidebars' );
 if ( ! function_exists( 'retro_scripts' ) ) {
     
     function retro_scripts() {
+        wp_enqueue_script( 'retro-fontawesome-kit', 'https://kit.fontawesome.com/ceb2b8cd67.js' );
         wp_enqueue_script( 'retro-flexslider', get_template_directory_uri() . '/assets/js/plugins/jquery.flexslider.min.js', array( 'jquery' ),'', false );
         wp_enqueue_script( 'retro-fitvids', get_template_directory_uri() . '/assets/js/plugins/jquery.fitvids.js', array( 'jquery' ),'', true );
         wp_enqueue_script( 'retro-jq-sticky-anything', get_template_directory_uri() . '/assets/js/plugins/jq-sticky-anything.min.js', array( 'jquery' ),'', true );
         wp_enqueue_script( 'retro-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'', true );
-        if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
+        if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); 
+        }
     }  
-    
 }
 add_action( 'wp_enqueue_scripts', 'retro_scripts' ); 
 
@@ -196,10 +197,11 @@ add_action( 'wp_enqueue_scripts', 'retro_scripts' );
 if ( ! function_exists( 'retro_styles' ) ) {
     
     function retro_styles() {
-        wp_enqueue_style( 'retro-app', get_template_directory_uri() . '/assets/build/app.min.css');
         if ( get_theme_mod('responsive','on') =='on' ) { wp_enqueue_style( 'retro-responsive', get_template_directory_uri().'/responsive.css' ); }
         if ( get_theme_mod('dark','off') == 'on' ) { wp_enqueue_style( 'retro-dark', get_template_directory_uri().'/dark.css' ); }
         wp_enqueue_style( 'retro-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
+        wp_enqueue_style( 'retro-app', get_template_directory_uri() . '/assets/build/app.min.css');
+
     }
     
 }
