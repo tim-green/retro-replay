@@ -181,10 +181,10 @@ if ( ! function_exists( 'retro_scripts' ) ) {
     
     function retro_scripts() {
         wp_enqueue_script( 'retro-fontawesome-kit', 'https://kit.fontawesome.com/ceb2b8cd67.js' );
+        wp_enqueue_script( 'retro-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'', true );
         wp_enqueue_script( 'retro-flexslider', get_template_directory_uri() . '/assets/js/plugins/jquery.flexslider.min.js', array( 'jquery' ),'', false );
         wp_enqueue_script( 'retro-fitvids', get_template_directory_uri() . '/assets/js/plugins/jquery.fitvids.js', array( 'jquery' ),'', true );
         wp_enqueue_script( 'retro-jq-sticky-anything', get_template_directory_uri() . '/assets/js/plugins/jq-sticky-anything.min.js', array( 'jquery' ),'', true );
-        wp_enqueue_script( 'retro-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'', true );
         if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); 
         }
     }  
