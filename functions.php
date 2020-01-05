@@ -703,6 +703,11 @@ if ( ! function_exists( 'retro_plugins' ) ) {
         if ( get_theme_mod('recommended-plugins','on') =='on' ) {   
             // Add the following plugins
             $plugins = array(
+                array(
+                    'name' => esc_html__( 'GroundCTRL Extensions', 'retro' ),
+                    'slug' => 'groutnctrl-extensions',
+                ),
+                array(
                     'name' => esc_html__( 'Meta Box', 'retro' ),
                     'slug' => 'meta-box',
                 ),
