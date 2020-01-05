@@ -30,7 +30,12 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'assets/build/app.min.js': [
-            'assets/js/app.js'
+            'assets/js/app.js',
+            'assets/js/plugins/jq-sticky-anything.min.js',
+            'assets/js/plugins/jquery.fitvids.js',
+            'assets/js/plugins/jquery.flexslider.js',
+            'assets/js/switch.js',
+            'assets/js/scripts.js'
           ]
         },
         options: {
