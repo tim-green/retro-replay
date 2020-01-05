@@ -703,11 +703,6 @@ if ( ! function_exists( 'retro_plugins' ) ) {
         if ( get_theme_mod('recommended-plugins','on') =='on' ) {   
             // Add the following plugins
             $plugins = array(
-                array(
-                    'name' => esc_html__( 'Alx Extensions', 'retro' ),
-                    'slug' => 'alx-extensions',
-                ),
-                array(
                     'name' => esc_html__( 'Meta Box', 'retro' ),
                     'slug' => 'meta-box',
                 ),
