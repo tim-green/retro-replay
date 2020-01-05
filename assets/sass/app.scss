@@ -22,6 +22,8 @@
 
 */
 
+@import "plugins/owl";
+@import "plugins/flexslider";
 
 
 /*
@@ -40,8 +42,8 @@
 
 @import "sections/header";
 @import "sections/main";
+@import "sections/accessibility";
 @import "sections/footer";
-
 
 /*
 
