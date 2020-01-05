@@ -5,13 +5,287 @@
 
 */
 
-.header{
-  display: block;
-  padding: 150px 30px 0;
-  width: 420px;
-  max-width: 100%;
-
-  h1{
-    margin: 0 0 30px;
-  }
+/* ------------------------------------------------------------------------- * * Section: Header 
+/* ------------------------------------------------------------------------- */
+ #header {
+     position: relative;
+}
+ #header:after {
+     content:"";
+     display: block;
+     left: 0;
+     top: 0;
+     z-index: 1;
+     position: absolute;
+     border: solid;
+     border-color: $light-gray transparent;
+     border-width: 100px 100px 0 0;
+}
+ #page {
+     position: relative;
+}
+ #page:after {
+     background: $white;
+     border-bottom: 3px solid $med-gray;
+     position: absolute;
+     content:"";
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 100px;
+}
+ .s2:after {
+     background: $deep-black;
+     position: absolute;
+     content:"";
+     top: 0;
+     left: -9999px;
+     right: 140px;
+     height: 100%;
+     z-index: 0;
+}
+ #header img {
+     box-shadow: none;
+}
+ #header .pad {
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+ #header .container-inner {
+     position: relative;
+}
+ #header .social-links {
+     margin-top: 30px;
+}
+ .site-title {
+     font-size: 42px;
+     font-weight: 600;
+     letter-spacing: -0.5px;
+     float: left;
+     line-height: 60px;
+     padding: 10px 0;
+     position: relative;
+     z-index: 2;
+}
+ .site-title a {
+     display: block;
+     color: $medium-gray;
+     max-width: 100%;
+}
+ .site-title a img {
+     display: block;
+     max-width: 100%;
+     max-height: 60px;
+     height: auto;
+     padding: 0;
+     margin: 0 auto;
+     
+     @include border-radius(0);
+}
+ .site-description {
+     @include fontSize(14px);
+     color: $gray;
+     float: left;
+     margin: 0 0 0 20px;
+     line-height: 60px;
+     padding: 10px 0;
+     position: relative;
+     z-index: 2;
+}
+ .site-header {
+     position: relative;
+     z-index: 1;
+}
+ .site-image {
+     display: block;
+     margin: 0 auto;
+     max-height: 400px;
+}
+/* header : search 
+/* ------------------------------------ */
+ .toggle-search {
+     background: $light-gray;
+     color: $medium-gray;
+     @include fontSize(24px);
+     text-align: center;
+     cursor: pointer;
+     width: 100px;
+     height: 100px;
+     line-height: 100px;
+     display: block;
+     position: absolute;
+     right: 0;
+     bottom: 0;
+}
+ .toggle-search:hover, .toggle-search.active {
+     color: $soft-black;
+}
+ .toggle-search.active i:before {
+     content: "\f00d";
+     @include fontSize(22px);
+}
+ .search-expand {
+     display: none;
+     position: absolute;
+     bottom: 0;
+     right: 100px;
+     width: 340px;
+}
+ .search-expand-inner {
+     background: $light-gray;
+     padding: 32px;
+     border-right: 1px solid $med-gray;
+}
+ .search-expand .themeform input {
+     background: $white;
+     width: 100%;
+     border: 1px solid $light-gray;
+}
+ .search-expand .themeform input:focus {
+     border-color: $lighty-gray;
+}
+/* header : nav mobile 
+/* ------------------------------------ */
+ #nav-mobile.nav-container {
+     background: $white;
+     border-top: 1px solid $light-gray;
+     border-bottom: 3px solid $med-gray;
+     padding-left: 20px;
+     padding-right: 20px;
+}
+ #nav-mobile .nav-toggle {
+     background: transparent;
+     color: $medium-gray;
+}
+ #nav-mobile .nav-text {
+     color: $light-gray;
+}
+ @media only screen and (max-width: 719px) {
+    /* components */
+     #nav-mobile .nav-wrap {
+         background: $white;
+    }
+     #nav-mobile .nav {
+         padding: 0 0 20px;
+    }
+     #nav-mobile .nav li a {
+         color: $medium-gray;
+         border-bottom: 1px solid $light-gray;
+    }
+    /* level 1 */
+     #nav-mobile .nav li > a:hover, #nav-mobile .nav li.current_page_item > a, #nav-mobile .nav li.current-menu-item > a, #nav-mobile .nav li.current-post-parent > a {
+         background: $light-gray;
+         color: $pink;
+    }
+}
+/* hide and display */
+ @media only screen and (min-width: 720px) {
+     .mobile-menu #nav-mobile {
+         display: none;
+    }
+}
+ @media only screen and (max-width: 719px) {
+     .mobile-menu #nav-header {
+         display: none;
+    }
+}
+/* header : nav header 
+/* ------------------------------------ */
+ #nav-header.nav-container {
+     background: $white;
+     padding-left: 40px;
+     padding-right: 40px;
+     padding-top: 38px;
+     padding-bottom: 26px;
+     margin-right: 100px;
+     border-bottom: 3px solid $med-gray;
+     border-right: 3px solid $med-gray;
+     border-top: 1px solid $light-gray;
+}
+ #nav-header:after {
+     content:"";
+     display: block;
+     right: -104px;
+     top: -1px;
+     position: absolute;
+     border: solid;
+     border-color: $med-gray transparent;
+     border-width: 102px 102px 0 0;
+}
+ #nav-header .nav-toggle {
+     background: transparent;
+     color: $medium-gray;
+}
+ #nav-header .nav-text {
+     color: $light-gray;
+}
+ @media only screen and (min-width: 720px) {
+    /* components */
+     #nav-header .nav {
+         font-weight: 600;
+    }
+     #nav-header .nav li a {
+         @include fontSize(14px);
+         color: $light-gray-two;
+         text-transform: uppercase;
+    }
+     #nav-header .nav > li:first-child {
+    }
+    /* level 1 */
+     #nav-header .nav > li {
+         border-right: none;
+         margin-right: 30px;
+         margin-bottom: 10px;
+    }
+     #nav-header .nav > li > a {
+         padding: 0 0 4px;
+         border-bottom: 2px solid transparent;
+         margin-bottom: -1px;
+    }
+     #nav-header .nav > li > a:hover, #nav-header .nav > li:hover > a {
+         background: transparent;
+         color: $soft-black;
+    }
+     #nav-header .nav li > a:hover, #nav-header .nav li:hover > a {
+         color: $soft-black;
+    }
+     #nav-header .nav li.current_page_item > a, #nav-header .nav li.current-menu-item > a, #nav-header .nav li.current-menu-ancestor > a, #nav-header .nav li.current-post-parent > a {
+         color: $soft-black;
+         border-bottom-color: $pink;
+    }
+    /* level 2 & 3 */
+     #nav-header .nav > li > ul {
+         top: 26px;
+    }
+     #nav-header .nav ul {
+         background: $white;
+    }
+     #nav-header .nav ul li {
+         border-bottom: 1px solid $light-gray;
+    }
+     #nav-header .nav ul li:last-child {
+         border-bottom: none;
+    }
+     #nav-header .nav ul li a {
+         @include fontSize(12px);
+         border: none;
+    }
+}
+ @media only screen and (max-width: 719px) {
+    /* components */
+     #nav-header .nav-wrap {
+         background: $white;
+    }
+     #nav-header .nav {
+         padding: 0 0 20px;
+    }
+     #nav-header .nav li a {
+         color: $medium-gray;
+         border-bottom: 1px solid $light-gray;
+    }
+    /* level 1 */
+     #nav-header .nav li > a:hover, #nav-header .nav li.current_page_item > a, #nav-header .nav li.current-menu-item > a, #nav-header .nav li.current-post-parent > a {
+         background: $light-gray;
+         color: $pink;
+    }
 }
