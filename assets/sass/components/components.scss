@@ -5,3 +5,457 @@
 
 */
 
+/* ------------------------------------------------------------------------- * * Components Elements 
+/* ------------------------------------------------------------------------- */
+/* components : responsive videos 
+/* ------------------------------------ */
+ embed, object, iframe {
+     max-width: 100%;
+}
+ .video-container {
+     height: auto!important;
+     max-width: 100%!important;
+     text-align: center;
+}
+ .video-container iframe {
+     margin: 0 auto;
+}
+ .video-container > div {
+     margin: 0 auto;
+}
+/* components : responsive image + caption 
+/* ------------------------------------ */
+ .image-container {
+     position: relative;
+}
+ .image-container img {
+     display: block;
+     width: 100%;
+     height: auto;
+}
+ .image-caption {
+     background: rgba(0,0,0,0.7);
+     color: $white;
+     @include fontSize(13px);
+     line-height: 1.3em;
+     font-style: italic;
+     padding: 8px 10px;
+     position: absolute;
+     bottom: 8px;
+     left: 8px;
+     margin-right: 8px;
+     
+     @include border-radius(2px);
+     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.03);
+     box-shadow: inset 0 1px 1px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.03);
+}
+/* components : social links 
+/* ------------------------------------ */
+ .social-links {
+     float: right;
+     position: relative;
+     z-index: 2;
+}
+ .social-links li {
+     display: inline-block;
+     margin-left: 8px;
+     line-height: 16px;
+     font-size: 0;
+}
+ .social-links li a {
+     display: block!important;
+     position: relative;
+     text-align: center;
+}
+ .social-links .social-tooltip {
+     color: $medium-gray;
+     @include fontSize(24px);
+     display: inline;
+     position: relative;
+     z-index: 98;
+}
+ .social-links .social-tooltip:hover {
+     color: $softest-black;
+     text-decoration: none;
+}
+ .social-links .social-tooltip:hover:after {
+     top: -36px;
+     background: $light-gray;
+     @include fontSize(14px);
+     color: $mid-gray;
+     content: attr(title);
+     display: block;
+     right: 0;
+     padding: 5px 15px;
+     position: absolute;
+     white-space: nowrap;
+     
+     @include border-radius(3px);
+}
+ .social-links .social-tooltip:hover:before {
+     top: -10px;
+     right: 8px;
+     border: solid;
+     border-color: $light-gray transparent;
+     border-width: 5px 5px 0 5px;
+     content: "";
+     display: block;
+     position: absolute;
+     z-index: 1;
+}
+/* components : page title 
+/* ------------------------------------ */
+ .page-title {
+     position: relative;
+     border-bottom: 1px solid $med-gray;
+     color: $mid-gray;
+     @include fontSize(14px);
+     text-transform: uppercase;
+     line-height: 30px;
+}
+ .page-title a {
+     color: $gray;
+}
+ .page-title a:hover {
+     color: $medium-gray;
+}
+ .page-title span {
+     color: $gray;
+}
+ .page-title i {
+     margin-right: 8px;
+}
+ .page-title h1, .page-title h2, .page-title h4 {
+     color: $medium-gray;
+     float: left;
+}
+ .page-title .meta-single li {
+     float: left;
+     margin-right: 14px;
+}
+ .page-title .meta-single li.comments {
+     float: right;
+     margin-right: 0;
+}
+ .page-title .pad {
+     padding-top: 35px;
+     padding-bottom: 35px;
+}
+/* components : notebox 
+/* ------------------------------------ */
+ .notebox {
+     position: relative;
+     color: $harder-gray;
+     @include fontSize(15px);
+     line-height: 1.6em;
+}
+ .error404 .notebox {
+     margin-bottom: 30px;
+}
+ .notebox span {
+     font-weight: 600;
+}
+ .notebox .search-again {
+     margin-top: 10px;
+}
+ .notebox input[type="text"] {
+     width: 100%;
+}
+/* components : page image 
+/* ------------------------------------ */
+ .page-image {
+     overflow: hidden;
+     position: relative;
+     margin: 0 0 30px 0;
+}
+ .page-image-text {
+     position: absolute;
+     top: 50%;
+     margin-top: -35px;
+     width: 100%;
+     text-align: center;
+}
+ .page-image-text .caption {
+     color: $white;
+     @include fontSize(44px);
+     line-height: 70px;
+     text-transform: uppercase;
+     font-weight: 600;
+     text-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+ .page-image-text .description {
+     display: block;
+     color: $white;
+     @include fontSize(15px);
+     line-height: 36px;
+     font-weight: 300;
+}
+ .page-image-text .description i {
+     background: rgba(0,0,0,0.7);
+     opacity: 0.9;
+     font-style: normal;
+     padding: 6px 10px;
+     
+     @include border-radius(2px);
+}
+/* components : pagination 
+/* ------------------------------------ */
+ .pagination {
+     margin: 30px 50px;
+}
+ .pagination a {
+     @include fontSize(18px);
+     font-weight: 600;
+}
+/* components : thumb icon 
+/* ------------------------------------ */
+ .thumb-icon {
+     background: rgba(0,0,0,0.7);
+     color: $white;
+     text-align: center;
+     display: block;
+     width: 32px;
+     height: 32px;
+     position: absolute;
+     bottom: 50%;
+     left: 50%;
+     margin-left: -16px;
+     margin-bottom: -16px;
+     
+     @include border-radius(4px);
+     -moz-transition: all 0.7s ease;
+     -webkit-transition: all 0.7s ease;
+     transition: all 0.7s ease;
+     -webkit-box-shadow: 0 0 2px rgba(255,255,255,0.4);
+     box-shadow: 0 0 2px rgba(255,255,255,0.4);
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+     transform: rotate(45deg);
+}
+ .thumb-icon i {
+     @include fontSize(18px);
+     padding: 7px 0;
+     -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+     -ms-transform: rotate(-45deg);
+     -o-transform: rotate(-45deg);
+     transform: rotate(-45deg);
+}
+ .thumb-icon .fa-play {
+     margin: -1px 0 0 2px;
+}
+ .thumb-icon.small {
+     width: 24px;
+     height: 24px;
+     position: absolute;
+     bottom: 50%;
+     left: 50%;
+     margin: 0 0 -12px -12px;
+     
+     @include border-radius(3px);
+}
+ .thumb-icon.small i {
+     @include fontSize(12px);
+     line-height: 16px;
+     padding: 5px 0;
+}
+/* components : nav 
+/* ------------------------------------ */
+ .nav-container {
+     background: $hard-gray;
+     z-index: 99;
+     position: relative;
+}
+ .nav-toggle {
+     display: none;
+     background: $harder-gray;
+     cursor: pointer;
+     float: right;
+     height: 48px;
+     width: 60px;
+     color: $white;
+     text-align: center;
+}
+ .nav-toggle i {
+     @include fontSize(24px);
+     padding: 10px 0;
+}
+ .nav-text {
+     display: none;
+     float: right;
+     @include fontSize(16px);
+     line-height: 24px;
+     padding: 13px 20px;
+}
+ .nav li > a:after, .nav > li > a:after {
+     font-family: "Font Awesome 5 Free";
+     font-weight: 900;
+     display: inline-block;
+}
+ @media only screen and (min-width: 720px) {
+     .nav-wrap {
+         height: auto!important;
+    }
+    /* components */
+     .nav {
+         font-size: 0;
+         position: relative;
+    }
+     .nav li a {
+         color: $lighty-gray;
+         display: block;
+         line-height: 20px;
+    }
+    /* dropdown arrows */
+     .nav li > a:after {
+         content: "\f0da";
+         float: right;
+         opacity: 0.35;
+    }
+     .nav > li > a:after {
+        content: "\f0d7";
+         float: none;
+         margin-left: 6px;
+         @include fontSize(14px);
+         line-height: 1.2em;
+    }
+     .nav li > a:only-child:after {
+        content: "";
+         margin: 0;
+    }
+     #footer .nav li > a:after {
+         content: "\f0da";
+    }
+     #footer .nav > li > a:after {
+         content: "\f0d8";
+    }
+     #footer .nav li > a:only-child:after {
+         content: "";
+    }
+    /* level 1 */
+     .nav > li {
+         @include fontSize(16px);
+         border-right: 1px solid $light-gray-two;
+         display: inline-block;
+         position: relative;
+    }
+     .nav > li > a {
+         padding: 14px;
+    }
+     .nav > li > a:hover, .nav > li:hover > a {
+         background: $harder-gray;
+    }
+     .nav li > a:hover, .nav li:hover > a, .nav li.current_page_item > a, .nav li.current-menu-item > a, .nav li.current-menu-ancestor > a, .nav li.current-post-parent > a {
+         color: $white;
+    }
+    /* level 2 & 3 */
+     .nav li:hover > ul {
+         display: block;
+    }
+     .nav ul {
+         display: none;
+         background: $harder-gray;
+         position: absolute;
+         left: 0;
+         top: 48px;
+         width: 180px;
+         padding: 10px 0;
+         z-index: 2;
+         -webkit-transform: translateZ(0);
+         -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+         box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+    }
+     .nav ul li {
+         @include fontSize(14px);
+         position: relative;
+         display: block;
+         padding: 0;
+    }
+     .nav ul li a {
+         padding: 10px 20px;
+    }
+     .nav ul li:last-child {
+         border-bottom: 0!important;
+    }
+    /* level 3 */
+     .nav ul ul {
+         position: absolute;
+         top: -10px;
+         left: 180px;
+    }
+}
+ @media only screen and (max-width: 719px) {
+     .nav {
+         font-weight: 600;
+    }
+     .nav-container {
+         text-transform: none;
+    }
+     .nav-toggle, .nav-text {
+         display: block;
+    }
+     .nav-wrap {
+         position: relative;
+         float: left;
+         width: 100%;
+         height: 0;
+         overflow: hidden;
+    }
+     .nav-wrap.transition {
+         -webkit-transition: height 0.35s ease;
+         -moz-transition: height 0.35s ease;
+         -o-transition: height 0.35s ease;
+         transition: height 0.35s ease;
+    }
+     .expand .nav-wrap {
+         height: auto;
+    }
+    /* components */
+     .nav {
+         float: left;
+         width: 100%;
+    }
+     .nav li a {
+         line-height: 20px;
+         display: block;
+         padding: 8px 20px;
+    }
+     .nav li li a {
+         padding-left: 15px;
+         padding-right: 15px;
+    }
+    /* dropdown arrows */
+     .nav li > a:after {
+         content: '\f0d7';
+         opacity: 0.5;
+         margin-left: 6px;
+    }
+     .nav > li > a:after {
+         content: '\f0d7';
+         @include fontSize(14px);
+    }
+     .nav li > a:only-child:after {
+         content: '';
+    }
+    /* level 1 */
+     .nav > li {
+         @include fontSize(15px);
+    }
+     .nav li > a:hover, .nav li.current_page_item > a, .nav li.current-menu-item > a, .nav li.current-post-parent > a {
+         color: $white;
+    }
+    /* level 2 & 3 */
+     .nav ul {
+         display: block!important;
+         margin-left: 40px;
+    }
+     .nav ul li {
+         font-weight: 300;
+    }
+     .nav ul li a {
+         padding-top: 6px;
+         padding-bottom: 6px;
+    }
+}
