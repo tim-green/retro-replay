@@ -146,7 +146,7 @@
  .notebox {
      position: relative;
      color: $harder-gray;
-     @include fontSize(15px);
+     @include fontSize(20px);
      line-height: 1.6em;
 }
  .error404 .notebox {
