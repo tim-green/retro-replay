@@ -1,0 +1,8 @@
+node_modules
+assets/js/.DS_Store
+assets/sass/components/.DS_Store
+assets/sass/.DS_Store
+functions/.DS_Store
+.DS_Store
+.jshintrc
+.sass-cache
