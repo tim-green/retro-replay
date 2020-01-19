@@ -59,6 +59,17 @@
      height: 100%;
      display: block;
 }
+.post-details-thumb a:hover:before{
+     font-family: $fa-pro;
+     color: $white;
+     content:'\f249';
+     z-index: 100;
+     position: absolute;
+     top: 30%;
+     left: 40%;
+     text-align: center;
+     @include fontSize(24px);
+}
  .post-details-day {
      margin-top: 16px;
      @include fontSize(24px);
