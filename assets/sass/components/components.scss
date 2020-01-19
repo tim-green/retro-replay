@@ -310,12 +310,12 @@
     }
     /* dropdown arrows */
      .nav li > a:after {
-         content: "\f0da";
+         content: "\f078";
          float: right;
          opacity: 0.35;
     }
      .nav > li > a:after {
-        content: "\f0d7";
+        content: "\f078";
          float: none;
          margin-left: 6px;
          @include fontSize(14px);
