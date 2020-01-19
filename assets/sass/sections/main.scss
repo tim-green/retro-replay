@@ -464,6 +464,8 @@
      @include fontSize(14px);
      line-height: 1.5em;
 }
+
+
 /* single : related posts 
 /* ------------------------------------ */
  .related-posts {
@@ -1168,6 +1170,12 @@
      padding: 1px;
      
      @include border-radius(2px);
+}
+.comment-author cite a{
+     color: $darker-gray;
+     &:hover{
+          color: $pink;
+     }
 }
 /* child comment */
  .commentlist li ul {
