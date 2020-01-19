@@ -398,9 +398,10 @@
      max-width: 100%!important;
 }
  .entry .wp-caption-text {
-     color: $light-gray;
+     color: $darker-gray;
+     background: $pink;
      @include fontSize(13px);
-     padding: 0 0 8px 0;
+     padding: 5px 0;
      margin: 0;
 }
 /* table */
