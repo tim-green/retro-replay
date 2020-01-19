@@ -103,6 +103,10 @@
      @include fontSize(38px);
      position: relative;
      top: -7px;
+     &:hover{
+        color: $pink;
+        @include transition(color .6s ease);
+     }
 }
  #footer-bottom #back-to-top:hover {
      color: $medium-gray;
