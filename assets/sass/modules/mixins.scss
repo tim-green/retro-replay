@@ -55,6 +55,8 @@
 
 
 //transition
+//example
+/// @include transition(color .3s ease);
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
