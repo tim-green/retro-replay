@@ -317,7 +317,7 @@
      @include fontSize(11px);
 }
  .entry pre {
-     background: url(assets/images/pre.png) repeat top;
+     background: url(../../assets/images/pre.png) repeat top;
      padding: 18px 20px;
      margin: 30px 0;
      border: 1px solid $light-gray;
@@ -648,7 +648,7 @@
 /* ------------------------------------ */
 /* 2 column, content left */
  .col-2cl .main-inner {
-     background: url(assets/images/sidebar/s-right.png) repeat-y right 0;
+     background: url(../../assets/images/sidebar/s-right.png) repeat-y right 0;
      padding-right: 320px;
 }
  .col-2cl .s1 {
@@ -660,7 +660,7 @@
 }
 /* 2 column, content right */
  .col-2cr .main-inner {
-     background: url(assets/images/sidebar/s-left.png) repeat-y left 0;
+     background: url(../../assets/images/sidebar/s-left.png) repeat-y left 0;
      padding-left: 320px;
 }
  .col-2cr .s1 {
