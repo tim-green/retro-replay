@@ -290,7 +290,7 @@
      padding: 13px 20px;
 }
  .nav li > a:after, .nav > li > a:after {
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      display: inline-block;
 }
@@ -316,6 +316,7 @@
     }
      .nav > li > a:after {
         content: "\f078";
+        font-family: $fa-pro;
          float: none;
          margin-left: 6px;
          @include fontSize(14px);
