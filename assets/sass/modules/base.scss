@@ -128,7 +128,7 @@
      content: "\f08c";
 }
  .sharrre-header .count .fa:before, .sharrre-footer .count .fa:before, .alx-tabs-nav i:before {
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      font-style: normal;
      font-variant: normal;
@@ -251,7 +251,7 @@
      position: absolute;
      left: 10px;
      top: 6px;
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
 }
 /* base : entry 
@@ -302,7 +302,7 @@
      color: $lighty-gray;
      @include fontSize(32px);
      font-style: normal;
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      text-align: center;
      position: absolute;
