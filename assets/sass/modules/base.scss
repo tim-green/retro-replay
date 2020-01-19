@@ -39,6 +39,10 @@
  #wpadminbar img {
      box-shadow: none;
 }
+
+// .fa, .fab, .fad, .fal, .far, .fas{
+//      color: $pink;
+// }
  a, a:before, a:after {
      -webkit-transition-property: background color;
      -webkit-transition-duration: 0.2s;
@@ -260,6 +264,13 @@
      @include fontSize(17px);
      line-height: 1.6em;
 }
+ .entry a{
+     color: $pink;
+ }
+.entry a:hover{
+     color: $darker-gray;
+     text-decoration: underline;
+ }
  .entry p, .entry dd {
      margin-bottom: 1em;
 }
