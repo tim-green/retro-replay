@@ -428,7 +428,7 @@
      line-height: 12px;
      width: 12px;
      font-style: normal;
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      text-align: center;
      @include border-radius(3px);
@@ -645,7 +645,7 @@
 /* widgets : icons 
 /* ------------------------------------ */
  .widget > ul li:before, .widget > ul li a:before, .widget > div > ul li a:before, .widget_calendar caption:before {
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      @include fontSize(12px);
      margin-right: 6px;
@@ -692,7 +692,7 @@
      bottom: -1px;
 }
  .widget > h3:after {
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      color: $pink;
      @include fontSize(18px);
@@ -1075,7 +1075,7 @@
  .commentlist .comment-meta:before, .pinglist .ping-meta:before {
      color: $lighty-gray;
      content: "\f017";
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      @include fontSize(10px);
      margin-right: 3px;
@@ -1134,7 +1134,7 @@
      line-height: 12px;
      width: 12px;
      font-style: normal;
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      text-align: center;
 }
@@ -1312,7 +1312,7 @@
      padding: 11px 20px;
 }
  .child-menu > li > ul > li > a:before {
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      content: "\f067";
      @include fontSize(18px);
@@ -1364,7 +1364,7 @@
 }
  .wp-pagenavi span.pages:before {
      content: "\f15c";
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      margin-right: 6px;
 }

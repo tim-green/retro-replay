@@ -231,7 +231,7 @@
 /* direction nav arrows */
  .flex-direction-nav a:before {
      color: $white;
-     font-family: "Font Awesome 5 Free";
+     font-family: $fa-pro;
      font-weight: 900;
      @include fontSize(20px);
      line-height: 24px;
