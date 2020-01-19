@@ -10,11 +10,11 @@
 
 */
 
-@import "modules/reset";
 @import "modules/mixins";
 @import "modules/variables";
-@import "modules/typography";
+@import "modules/reset";
 @import "modules/base";
+@import "modules/typography";
 /*
 
  ==== Plugins ====
@@ -43,6 +43,7 @@
 @import "sections/main";
 @import "sections/footer";
 @import "sections/accessibility";
+@import "components/components";
 /*
 
  ==== Pages ====
