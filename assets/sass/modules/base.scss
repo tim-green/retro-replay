@@ -426,7 +426,7 @@
      background: $light-gray;
 }
  .entry table td {
-     border-bottom: 1px solid $light-gray;
+     border-bottom: 1px solid $darker-gray;
      text-align: center;
      padding: 5px;
      vertical-align: middle;
@@ -434,8 +434,8 @@
  .entry table th {
      font-weight: 600;
      text-align: center;
-     border-top: 1px solid $light-gray;
-     border-bottom: 1px solid $light-gray;
+     border-top: 1px solid $darker-gray;
+     border-bottom: 1px solid $darker-gray;
      padding: 10px 5px;
 }
 /* default gallery */
