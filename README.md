@@ -10,6 +10,8 @@ Creating a simple WordPress theme
 
 - Create either a plugin or use ACF to give extra functionality/extending options for social media links, sidebars and any other ideas
 
+- Finish up Responsive stylesheet
+
 - Test theme on various screen sizes
 
 - Test dark and normal modes
