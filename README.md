@@ -5,5 +5,10 @@ Creating a simple WordPress theme for blogging
 
 - Create either a plugin or use ACF to give extra functionality/extending options for social media links, sidebars and any other ideas
 
-  
+
+
+
+### Screenshot
+
+![](http://cdn.timgreen.xyz/retro-replay/retro-replay-1.png)
 
