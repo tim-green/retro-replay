@@ -1,19 +1,9 @@
 # Retro Replay - WordPress Theme
-## Work in Progress
-Creating a simple WordPress theme
+Creating a simple WordPress theme for blogging
 
-### ToDo
-
-- Clean up sass and be more specific with modules and components in each sass file
-
-- Fix any broken images 
+### Future To Do
 
 - Create either a plugin or use ACF to give extra functionality/extending options for social media links, sidebars and any other ideas
 
-- Finish up Responsive stylesheet
-
-- Test theme on various screen sizes
-
-- Test dark and normal modes
-
   
+
